@@ -1,0 +1,10 @@
+services:
+    - github.com/threefoldtech/0-templates/container/0.0.1__traefikcontainer:
+          flist: 'https://hub.grid.tf/delandtj/traefik.flist'
+          storage: 'zdb://hub.grid.tf:9900'
+          nics:
+            - type: 'default'
+actions:
+    - template: 'github.com/threefoldtech/0-templates/container/0.0.1'
+      service: 'traefikcontainer'
+      actions: ['install']
